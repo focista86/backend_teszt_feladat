@@ -32,7 +32,7 @@ public class AlbumController {
 
 //    ID alapján legyen lekérhető egy album minden alapadata és a hozzátartozó trackek listája. 
 //    A trackek listájában szerepeljen a számok címe, hossza és stílusa.
-    @GetMapping(path = "/album")
+    @GetMapping(path = "/album/{id}")
     public @ResponseBody
     Album getAlbum(@RequestParam Long id) {
         return new Album();

@@ -16,6 +16,16 @@ public class Artists {
     private String formedYear;
     private String biography;
 
+    public Artists() {
+    }
+
+    public Artists(String name, String genre, String formedYear, String biography) {
+        this.name = name;
+        this.genre = genre;
+        this.formedYear = formedYear;
+        this.biography = biography;
+    } 
+    
     public Long getId() {
         return id;
     }

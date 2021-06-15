@@ -17,13 +17,21 @@ public class Album {
     private Long id;
     private String title;
     private Date releaseDate;
-    
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id", referencedColumnName = "id")
     private Artists artist;
-    
     private String coverImageUrl;
+    
+    public Album() {
+    }
 
+    public Album(String title, Date releaseDate, Artists artist, String coverImageUrl) {
+        this.title = title;
+        this.releaseDate = releaseDate;
+        this.artist = artist;
+        this.coverImageUrl = coverImageUrl;
+    }    
+    
     public Long getId() {
         return id;
     }
